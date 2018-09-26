@@ -1,7 +1,7 @@
-package htsign.util.chainer;
+package jp.htsign.util.chainer;
 
 import java.util.function.*;
-import htsign.util.function.*;
+import jp.htsign.util.function.*;
 
 public class IntChainer {
   private int value;

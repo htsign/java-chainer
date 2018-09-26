@@ -1,4 +1,4 @@
-package htsign.util.function;
+package jp.htsign.util.function;
 
 @FunctionalInterface
 public interface ByteToShortFunction {
