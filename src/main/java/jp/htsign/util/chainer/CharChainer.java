@@ -14,35 +14,35 @@ public class CharChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BooleanChainer chain(final CharToBooleanFunction func) {
-    return new BooleanChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final CharToBooleanFunction func) {
+    return new BoolChainer(func.applyAsBoolean(value));
   }
 
-  public ByteChainer chain(final CharToByteFunction func) {
+  public ByteChainer chainToByte(final CharToByteFunction func) {
     return new ByteChainer(func.applyAsByte(value));
   }
 
-  public ShortChainer chain(final CharToShortFunction func) {
+  public ShortChainer chainToShort(final CharToShortFunction func) {
     return new ShortChainer(func.applyAsShort(value));
   }
 
-  public IntChainer chain(final CharToIntFunction func) {
+  public IntChainer chainToInt(final CharToIntFunction func) {
     return new IntChainer(func.applyAsInt(value));
   }
 
-  public LongChainer chain(final CharToLongFunction func) {
+  public LongChainer chainToLong(final CharToLongFunction func) {
     return new LongChainer(func.applyAsLong(value));
   }
 
-  public FloatChainer chain(final CharToFloatFunction func) {
+  public FloatChainer chainToFloat(final CharToFloatFunction func) {
     return new FloatChainer(func.applyAsFloat(value));
   }
 
-  public DoubleChainer chain(final CharToDoubleFunction func) {
+  public DoubleChainer chainToDouble(final CharToDoubleFunction func) {
     return new DoubleChainer(func.applyAsDouble(value));
   }
 
-  public CharChainer chain(final CharUnaryOperator func) {
+  public CharChainer chainToChar(final CharUnaryOperator func) {
     return new CharChainer(func.applyAsChar(value));
   }
 

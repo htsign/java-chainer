@@ -14,35 +14,35 @@ public class ByteChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BooleanChainer chain(final ByteToBooleanFunction func) {
-    return new BooleanChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final ByteToBooleanFunction func) {
+    return new BoolChainer(func.applyAsBoolean(value));
   }
 
-  public ByteChainer chain(final ByteUnaryOperator func) {
+  public ByteChainer chainToByte(final ByteUnaryOperator func) {
     return new ByteChainer(func.applyAsByte(value));
   }
 
-  public ShortChainer chain(final ByteToShortFunction func) {
+  public ShortChainer chainToShort(final ByteToShortFunction func) {
     return new ShortChainer(func.applyAsShort(value));
   }
 
-  public IntChainer chain(final ByteToIntFunction func) {
+  public IntChainer chainToInt(final ByteToIntFunction func) {
     return new IntChainer(func.applyAsInt(value));
   }
 
-  public LongChainer chain(final ByteToLongFunction func) {
+  public LongChainer chainToLong(final ByteToLongFunction func) {
     return new LongChainer(func.applyAsLong(value));
   }
 
-  public FloatChainer chain(final ByteToFloatFunction func) {
+  public FloatChainer chainToFloat(final ByteToFloatFunction func) {
     return new FloatChainer(func.applyAsFloat(value));
   }
 
-  public DoubleChainer chain(final ByteToDoubleFunction func) {
+  public DoubleChainer chainToDouble(final ByteToDoubleFunction func) {
     return new DoubleChainer(func.applyAsDouble(value));
   }
 
-  public CharChainer chain(final ByteToCharFunction func) {
+  public CharChainer chainToChar(final ByteToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
 
