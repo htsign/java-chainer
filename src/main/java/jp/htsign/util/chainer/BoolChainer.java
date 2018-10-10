@@ -3,10 +3,10 @@ package jp.htsign.util.chainer;
 import java.util.function.*;
 import jp.htsign.util.function.*;
 
-public class BooleanChainer {
+public class BoolChainer {
   private boolean value;
 
-  public BooleanChainer(final boolean value) {
+  public BoolChainer(final boolean value) {
     this.value = value;
   }
 
@@ -14,8 +14,8 @@ public class BooleanChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BooleanChainer chain(final BooleanUnaryOperator func) {
-    return new BooleanChainer(func.applyAsBoolean(value));
+  public BoolChainer chain(final BooleanUnaryOperator func) {
+    return new BoolChainer(func.applyAsBoolean(value));
   }
 
   public ByteChainer chain(final BooleanToByteFunction func) {
