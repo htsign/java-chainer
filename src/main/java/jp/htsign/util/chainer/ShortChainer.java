@@ -45,6 +45,10 @@ public class ShortChainer {
   public CharChainer chainToChar(final ShortToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final ShortConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public short getValue() {
     return value;

@@ -45,6 +45,10 @@ public class DoubleChainer {
   public CharChainer chainToChar(final DoubleToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final DoubleConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public double getValue() {
     return value;

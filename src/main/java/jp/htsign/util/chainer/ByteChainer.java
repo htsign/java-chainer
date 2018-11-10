@@ -45,6 +45,10 @@ public class ByteChainer {
   public CharChainer chainToChar(final ByteToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final ByteConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public byte getValue() {
     return value;

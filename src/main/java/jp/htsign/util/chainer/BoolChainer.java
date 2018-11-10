@@ -45,6 +45,10 @@ public class BoolChainer {
   public CharChainer chainToChar(final BooleanToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final BooleanConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public boolean getValue() {
     return value;

@@ -45,6 +45,10 @@ public class LongChainer {
   public CharChainer chainToChar(final LongToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final LongConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public long getValue() {
     return value;

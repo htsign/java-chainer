@@ -45,6 +45,10 @@ public class FloatChainer {
   public CharChainer chainToChar(final FloatToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final FloatConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public float getValue() {
     return value;

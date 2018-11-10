@@ -45,6 +45,10 @@ public class CharChainer {
   public CharChainer chainToChar(final CharUnaryOperator func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final CharConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public char getValue() {
     return value;

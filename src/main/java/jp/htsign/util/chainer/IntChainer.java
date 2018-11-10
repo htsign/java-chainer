@@ -45,6 +45,10 @@ public class IntChainer {
   public CharChainer chainToChar(final IntToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
+  
+  public void consume(final IntConsumer consumer) {
+    consumer.accept(value);
+  }
 
   public int getValue() {
     return value;
