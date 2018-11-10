@@ -14,8 +14,8 @@ public class DoubleChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final DoubleToBooleanFunction func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final DoubleToBoolFunction func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
   public ByteChainer chainToByte(final DoubleToByteFunction func) {

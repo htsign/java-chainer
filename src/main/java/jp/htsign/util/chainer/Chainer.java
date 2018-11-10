@@ -14,8 +14,8 @@ public class Chainer<T> {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final ToBooleanFunction<T> func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final ToBoolFunction<T> func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
   public ByteChainer chainToByte(final ToByteFunction<T> func) {

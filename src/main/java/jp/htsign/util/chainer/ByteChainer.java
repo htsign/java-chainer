@@ -14,8 +14,8 @@ public class ByteChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final ByteToBooleanFunction func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final ByteToBoolFunction func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
   public ByteChainer chain(final ByteUnaryOperator func) {

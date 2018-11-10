@@ -10,43 +10,43 @@ public class BoolChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chainToObj(final BooleanFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final BoolFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chain(final BooleanUnaryOperator func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chain(final BoolUnaryOperator func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
-  public ByteChainer chainToByte(final BooleanToByteFunction func) {
+  public ByteChainer chainToByte(final BoolToByteFunction func) {
     return new ByteChainer(func.applyAsByte(value));
   }
 
-  public ShortChainer chainToShort(final BooleanToShortFunction func) {
+  public ShortChainer chainToShort(final BoolToShortFunction func) {
     return new ShortChainer(func.applyAsShort(value));
   }
 
-  public IntChainer chainToInt(final BooleanToIntFunction func) {
+  public IntChainer chainToInt(final BoolToIntFunction func) {
     return new IntChainer(func.applyAsInt(value));
   }
 
-  public LongChainer chainToLong(final BooleanToLongFunction func) {
+  public LongChainer chainToLong(final BoolToLongFunction func) {
     return new LongChainer(func.applyAsLong(value));
   }
 
-  public FloatChainer chainToFloat(final BooleanToFloatFunction func) {
+  public FloatChainer chainToFloat(final BoolToFloatFunction func) {
     return new FloatChainer(func.applyAsFloat(value));
   }
 
-  public DoubleChainer chainToDouble(final BooleanToDoubleFunction func) {
+  public DoubleChainer chainToDouble(final BoolToDoubleFunction func) {
     return new DoubleChainer(func.applyAsDouble(value));
   }
 
-  public CharChainer chainToChar(final BooleanToCharFunction func) {
+  public CharChainer chainToChar(final BoolToCharFunction func) {
     return new CharChainer(func.applyAsChar(value));
   }
   
-  public void consume(final BooleanConsumer consumer) {
+  public void consume(final BoolConsumer consumer) {
     consumer.accept(value);
   }
 

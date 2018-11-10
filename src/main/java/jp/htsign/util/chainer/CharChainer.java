@@ -14,8 +14,8 @@ public class CharChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final CharToBooleanFunction func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final CharToBoolFunction func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
   public ByteChainer chainToByte(final CharToByteFunction func) {

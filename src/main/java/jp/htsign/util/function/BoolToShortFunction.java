@@ -1,6 +1,6 @@
 package jp.htsign.util.function;
 
 @FunctionalInterface
-public interface BooleanToShortFunction {
+public interface BoolToShortFunction {
   public short applyAsShort(boolean value);
 }

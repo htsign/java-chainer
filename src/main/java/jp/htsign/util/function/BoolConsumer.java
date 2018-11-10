@@ -1,6 +1,6 @@
 package jp.htsign.util.function;
 
 @FunctionalInterface
-public interface BooleanConsumer {
+public interface BoolConsumer {
   public void accept(boolean value);
 }

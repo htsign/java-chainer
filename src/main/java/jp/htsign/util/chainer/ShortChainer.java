@@ -14,8 +14,8 @@ public class ShortChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final ShortToBooleanFunction func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final ShortToBoolFunction func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
   public ByteChainer chainToByte(final ShortToByteFunction func) {

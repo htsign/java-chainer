@@ -1,6 +1,6 @@
 package jp.htsign.util.function;
 
 @FunctionalInterface
-public interface BooleanToFloatFunction {
+public interface BoolToFloatFunction {
   public float applyAsFloat(boolean value);
 }

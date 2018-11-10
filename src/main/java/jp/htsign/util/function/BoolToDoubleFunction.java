@@ -1,6 +1,6 @@
 package jp.htsign.util.function;
 
 @FunctionalInterface
-public interface BooleanToDoubleFunction {
+public interface BoolToDoubleFunction {
   public double applyAsDouble(boolean value);
 }

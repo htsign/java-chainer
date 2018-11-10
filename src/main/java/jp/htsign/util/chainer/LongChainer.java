@@ -14,8 +14,8 @@ public class LongChainer {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final LongToBooleanFunction func) {
-    return new BoolChainer(func.applyAsBoolean(value));
+  public BoolChainer chainToBool(final LongToBoolFunction func) {
+    return new BoolChainer(func.applyAsBool(value));
   }
 
   public ByteChainer chainToByte(final LongToByteFunction func) {
