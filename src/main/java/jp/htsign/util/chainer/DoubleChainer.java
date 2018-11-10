@@ -10,7 +10,7 @@ public class DoubleChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final DoubleFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final DoubleFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -38,7 +38,7 @@ public class DoubleChainer {
     return new FloatChainer(func.applyAsFloat(value));
   }
 
-  public DoubleChainer chainToDouble(final DoubleUnaryOperator func) {
+  public DoubleChainer chain(final DoubleUnaryOperator func) {
     return new DoubleChainer(func.applyAsDouble(value));
   }
 

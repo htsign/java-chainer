@@ -10,11 +10,11 @@ public class BoolChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final BooleanFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final BooleanFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
-  public BoolChainer chainToBool(final BooleanUnaryOperator func) {
+  public BoolChainer chain(final BooleanUnaryOperator func) {
     return new BoolChainer(func.applyAsBoolean(value));
   }
 

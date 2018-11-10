@@ -10,7 +10,7 @@ public class ShortChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final ShortFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final ShortFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -22,7 +22,7 @@ public class ShortChainer {
     return new ByteChainer(func.applyAsByte(value));
   }
 
-  public ShortChainer chainToShort(final ShortUnaryOperator func) {
+  public ShortChainer chain(final ShortUnaryOperator func) {
     return new ShortChainer(func.applyAsShort(value));
   }
 

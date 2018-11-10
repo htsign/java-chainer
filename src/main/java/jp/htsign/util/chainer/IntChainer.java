@@ -10,7 +10,7 @@ public class IntChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final IntFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final IntFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -26,7 +26,7 @@ public class IntChainer {
     return new ShortChainer(func.applyAsShort(value));
   }
 
-  public IntChainer chainToInt(final IntUnaryOperator func) {
+  public IntChainer chain(final IntUnaryOperator func) {
     return new IntChainer(func.applyAsInt(value));
   }
 

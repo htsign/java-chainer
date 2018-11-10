@@ -10,7 +10,7 @@ public class LongChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final LongFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final LongFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -30,7 +30,7 @@ public class LongChainer {
     return new IntChainer(func.applyAsInt(value));
   }
 
-  public LongChainer chainToLong(final LongUnaryOperator func) {
+  public LongChainer chain(final LongUnaryOperator func) {
     return new LongChainer(func.applyAsLong(value));
   }
 

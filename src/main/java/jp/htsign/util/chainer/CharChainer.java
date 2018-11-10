@@ -10,7 +10,7 @@ public class CharChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final CharFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final CharFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -42,7 +42,7 @@ public class CharChainer {
     return new DoubleChainer(func.applyAsDouble(value));
   }
 
-  public CharChainer chainToChar(final CharUnaryOperator func) {
+  public CharChainer chain(final CharUnaryOperator func) {
     return new CharChainer(func.applyAsChar(value));
   }
   

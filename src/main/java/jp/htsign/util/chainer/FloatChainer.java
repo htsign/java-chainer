@@ -10,7 +10,7 @@ public class FloatChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final FloatFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final FloatFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -34,7 +34,7 @@ public class FloatChainer {
     return new LongChainer(func.applyAsLong(value));
   }
 
-  public FloatChainer chainToFloat(final FloatUnaryOperator func) {
+  public FloatChainer chain(final FloatUnaryOperator func) {
     return new FloatChainer(func.applyAsFloat(value));
   }
 

@@ -10,7 +10,7 @@ public class ByteChainer {
     this.value = value;
   }
 
-  public <R> Chainer<R> chain(final ByteFunction<R> func) {
+  public <R> Chainer<R> chainToObj(final ByteFunction<R> func) {
     return new Chainer<>(func.apply(value));
   }
 
@@ -18,7 +18,7 @@ public class ByteChainer {
     return new BoolChainer(func.applyAsBoolean(value));
   }
 
-  public ByteChainer chainToByte(final ByteUnaryOperator func) {
+  public ByteChainer chain(final ByteUnaryOperator func) {
     return new ByteChainer(func.applyAsByte(value));
   }
 
