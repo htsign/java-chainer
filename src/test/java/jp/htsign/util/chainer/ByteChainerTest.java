@@ -20,7 +20,7 @@ public class ByteChainerTest {
   
   @Test
   void testChainToBool() {
-    assertTrue(chainer.chainToBool(b -> b == (byte) 1 ? true : false).getValue());
+    assertTrue(chainer.chainToBool(b -> b == (byte) 1).getValue());
   }
   
   @Test
